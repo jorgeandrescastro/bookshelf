@@ -34,6 +34,11 @@ gem 'rspec', '~> 3.0.0'
 gem 'haml', '~> 4.0.5'
 gem 'haml-rails', '~> 0.5.1'
 
+# User Twitter Bootstrap
+gem 'therubyracer', '~> 0.12.1'
+gem 'less-rails', '~> 2.5.0'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
+
 # Specific gems for development 
 group :development do
   gem 'better_errors', '~> 2.0.0'
