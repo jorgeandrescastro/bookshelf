@@ -5,8 +5,9 @@ Bookshelf::Application.routes.draw do
   
   # Resources of the app
   resources :books
-  resources :author
-  resources :genre
+  resources :authors
+  resources :genres
+  resources :languages
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'

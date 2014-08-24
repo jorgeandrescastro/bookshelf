@@ -1,0 +1,9 @@
+%h1= "Listing all Genres"
+%table
+  %tr
+    %th= "Name"
+    %th= "Description"
+  - @genres.each do |genre|
+    %tr
+      %td= genre.name
+      %td= genre.descriptiony

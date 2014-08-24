@@ -1,0 +1,7 @@
+%h1= "Listing all Languages"
+%table
+  %tr
+    %th= "Name"
+  - @languages.each do |language|
+    %tr
+      %td= language.name
