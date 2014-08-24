@@ -1,0 +1,9 @@
+%h1= "Listing all Books"
+%table
+	%tr
+		%th= "Name"
+		%th= "Description"
+	- @books.each do |book|
+		%tr
+			%td= book.name
+			%td= book.description

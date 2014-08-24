@@ -30,6 +30,10 @@ gem 'jbuilder', '~> 1.2'
 # Use rspec for testing
 gem 'rspec', '~> 3.0.0'
 
+# Use Haml to preprocess html code
+gem 'haml', '~> 4.0.5'
+gem 'haml-rails', '~> 0.5.1'
+
 # Specific gems for development 
 group :development do
   gem 'better_errors', '~> 2.0.0'

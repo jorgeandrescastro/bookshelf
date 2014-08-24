@@ -3,6 +3,10 @@ class BooksController < ApplicationController
   def new
   end
 
+  def index
+    @books = Book.all
+  end
+
   def create
     @book = Book.new(post_params)
     @book.save
