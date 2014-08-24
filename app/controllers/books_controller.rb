@@ -9,8 +9,11 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(post_params)
-    @book.save
-    redirect_to @book
+    if @book.save
+      redirect_to @book
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -19,7 +22,7 @@ class BooksController < ApplicationController
 
   private
     def post_params
-      params.require(:book).permit(:name, :description)
+      params.require(:book).permit(:name, :description, :isbn, :published_year)
     end
 
 end

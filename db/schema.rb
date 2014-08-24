@@ -11,13 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824011622) do
+ActiveRecord::Schema.define(version: 20140824152606) do
+
+  create_table "authors", force: true do |t|
+    t.string   "name"
+    t.text     "biography"
+    t.string   "birth_country"
+    t.date     "birth_year"
+    t.date     "death_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "books", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "isbn"
+    t.integer  "published_year"
+    t.integer  "author_id"
+  end
+
+  create_table "books_genres", id: false, force: true do |t|
+    t.integer "book_id"
+    t.integer "genre_id"
+  end
+
+  add_index "books_genres", ["book_id", "genre_id"], name: "index_books_genres_on_book_id_and_genre_id", using: :btree
+
+  create_table "genres", force: true do |t|
+    t.string "name"
+    t.text   "description"
+  end
+
+  create_table "languages", force: true do |t|
+    t.string "name"
   end
 
 end

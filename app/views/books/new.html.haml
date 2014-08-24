@@ -1,12 +1,22 @@
 %h1= 'New Book'
 = form_for(:book, url: books_path) do |f|
+  - if @book.errors.any?
+    #error_explanation
+      %h4= pluralize(@book.errors.count, "error") + " prohibited this book from being saved:"
+      %ul
+        - @book.errors.full_messages.each do |msg|
+          %li= msg
   %p
     = f.label :name 
-    %br
     = f.text_field :name
   %p
     = f.label :description 
-    %br
     = f.text_area :description
+  %p
+    = f.label :isbn
+    = f.text_field :isbn
+  %p
+    = f.label :published_year
+    = f.text_field :published_year
   %p
     = f.submit
