@@ -30,6 +30,12 @@ gem 'jbuilder', '~> 1.2'
 # Use rspec for testing
 gem 'rspec', '~> 3.0.0'
 
+# Specific gems for development 
+group :development do
+  gem 'better_errors', '~> 2.0.0'
+  gem 'binding_of_caller', '~> 0.7.2'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
