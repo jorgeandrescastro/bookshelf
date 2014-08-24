@@ -32,6 +32,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Use country_select for countries handling
+gem 'country_select', '~> 1.3.1'
+
 # Use rspec for testing
 gem 'rspec', '~> 3.0.0'
 
