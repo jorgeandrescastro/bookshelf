@@ -2,8 +2,19 @@ ActiveAdmin.register Book do
   # permit_params :name, :description, :isbn, :published_year, :author_id
   controller do
     def permitted_params
-      params.permit book: [:name, :description, :isbn, :published_year, :author, genre_ids: []]
+      params.permit book: [:name, :description, :isbn, :published_year, :author, :image, genre_ids: []]
     end
+  end
+
+  index do
+    column :id
+    column "Hardcover" do |book|
+      link_to(image_tag(book.image.url(:small)), admin_book_path(book))
+    end
+    column :name
+    column :isbn
+    column :published_year
+    actions
   end
 
   form do |f|
@@ -14,12 +25,16 @@ ActiveAdmin.register Book do
       f.input :isbn
       f.input :published_year
       f.input :genres
+      f.input :image, :required => false, :as => :file
     end
     f.actions
   end
 
   show do |book|
     attributes_table do
+      row :image do
+        image_tag(book.image.url(:small))
+      end
       row :name
       row :author
       row :description

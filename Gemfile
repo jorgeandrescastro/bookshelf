@@ -9,6 +9,9 @@ gem 'pg', '~> 0.17.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+# Use paperclip gem for image handling
+gem 'paperclip', '~> 4.2.0'
+
 # Use ActiveAdmin
 gem 'devise', '~> 3.3.0'
 gem 'activeadmin', github: 'gregbell/active_admin'
