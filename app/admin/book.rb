@@ -1,8 +1,7 @@
 ActiveAdmin.register Book do
-  # permit_params :name, :description, :isbn, :published_year, :author_id
   controller do
     def permitted_params
-      params.permit book: [:name, :description, :isbn, :published_year, :author, :image, genre_ids: []]
+      params.permit book: [:name, :description, :isbn, :published_year, :author_id, :image, :language_id, genre_ids: []]
     end
   end
 
@@ -13,6 +12,7 @@ ActiveAdmin.register Book do
     end
     column :name
     column :author
+    column :language
     column :isbn
     column :published_year
     actions
@@ -22,6 +22,7 @@ ActiveAdmin.register Book do
     f.inputs "Book Details" do
       f.input :name
       f.input :author
+      f.input :language
       f.input :description
       f.input :isbn
       f.input :published_year
@@ -38,6 +39,7 @@ ActiveAdmin.register Book do
       end
       row :name
       row :author
+      row :language
       row :description
       row "Genres" do |book|
         (book.genres.map{ |g| link_to g.name, admin_genre_path(g.id) }).join(', ').html_safe
