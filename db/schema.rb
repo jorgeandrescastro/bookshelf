@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824162901) do
+ActiveRecord::Schema.define(version: 20140825021148) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -70,8 +70,6 @@ ActiveRecord::Schema.define(version: 20140824162901) do
     t.integer "book_id"
     t.integer "genre_id"
   end
-
-  add_index "books_genres", ["book_id", "genre_id"], name: "index_books_genres_on_book_id_and_genre_id", using: :btree
 
   create_table "genres", force: true do |t|
     t.string "name"
