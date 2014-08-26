@@ -12,6 +12,7 @@ ActiveAdmin.register Book do
       link_to(image_tag(book.image.url(:small)), admin_book_path(book))
     end
     column :name
+    column :author
     column :isbn
     column :published_year
     actions
