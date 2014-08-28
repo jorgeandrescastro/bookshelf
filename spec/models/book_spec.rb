@@ -8,7 +8,7 @@ describe Book do
   end
   
   it "can be instantiated" do
-      expect(Book.new).not_to be_an_instance_of(Author)
+    expect(Book.new).to be_an_instance_of(Book)
   end
 
   describe "Basic Validations" do
@@ -21,6 +21,49 @@ describe Book do
         @book.send("#{attr}=", nil)
         expect(@book).not_to be_valid
       end
+    end
+
+    [:name, :isbn].each do |attr|
+      it "must have an unique #{attr}" do
+        @book.save
+        new_book = FactoryGirl.build(:book_2)
+        new_book.send("#{attr}=", @book.send("#{attr}"))
+        expect(new_book).not_to be_valid
+      end
+    end
+  end
+
+  describe "Author association" do
+    it "should have the correct name" do
+      author = FactoryGirl.create(:author)
+      @book.author = author
+      expect(@book.author.name).to eq(author.name)
+    end 
+  end
+
+  describe "Language association" do
+    it "should have the correct name" do
+      language = FactoryGirl.create(:language)
+      @book.language = language
+      expect(@book.language.name).to eq(language.name)
+    end
+  end
+
+  describe "Genres association" do
+
+    before(:each) do
+      @genre1 = FactoryGirl.build(:genre)
+      @genre2 = FactoryGirl.build(:genre, :name => "Genre 2")
+      @genre3 = FactoryGirl.build(:genre, :name => "Genre 3")
+      @book.genres = [@genre1, @genre3]
+    end
+
+    it "should return added genres" do
+      expect(@book.genres).to eq([@genre1, @genre3])
+    end
+
+    it "should not return not added genres" do
+      expect(@book.genres).not_to include(@genre2)
     end
   end
 

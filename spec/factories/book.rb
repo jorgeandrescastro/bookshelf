@@ -11,4 +11,15 @@ FactoryGirl.define do
     f.image File.new("#{Rails.root}/spec/fixtures/image.jpg")
     f.language_id 1
   end
+
+  factory :book_2, class: Book do |f|
+    f.name "Book Spec 2"
+    f.description "Description Book 2"
+    f.isbn '8145454578451'
+    f.published_year 1976
+    f.genres { [FactoryGirl.create(:genre)] }
+    f.author_id 1
+    f.image File.new("#{Rails.root}/spec/fixtures/image.jpg")
+    f.language_id 1
+  end
 end
