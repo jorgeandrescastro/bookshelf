@@ -1,13 +1,20 @@
 @import "colors";
 @import "mixins";
 
+$header-height: 50px;
+
 body {
   background-color: $palette-light !important;
+  font-family: 'Special Elite', cursive !important;
 }
 
+a {
+  text-decoration: none !important;
+}
+
+/*************HEADERS**********************/
 .header {
   display: block;
-  font-family: 'Special Elite', cursive;
   position: fixed;
   width: 100%;
   height: $header-height;
@@ -31,3 +38,39 @@ body {
 .navbar {
   padding-top: $header-height;
 }
+
+/*************HEADERS END******************/
+
+/*************TEASERS**********************/
+.latest-books {
+  @include round_corners(10px);
+  background-color: $palette-medium-dark;
+  padding: 5px 10px 5px 10px;
+  color: $palette-light;
+}
+
+.book-teaser {
+  @include gradient_gray_boxes;
+  @include round_corners(7px);
+  padding: 5px;
+  height: 118px;
+  font-size: 15px;
+  margin-bottom: 8px;
+  .book-image {
+    padding-right: 10px;
+  }
+  .book-info {
+    padding-top: 28px;
+    color: $palette-dark;
+  }
+  .book-name {
+    font-weight: bold;
+  }
+  .book-author, .book-genres {
+    font-size: 12px;
+  }
+
+}
+
+
+/*************TEASERS END******************/

@@ -1,0 +1,4 @@
+.latest-books
+	%h4= "Latest Books added..."
+	- latest_books.each do |book|
+		= render "shared/book_teaser", book: book

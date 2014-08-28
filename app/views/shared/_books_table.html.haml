@@ -1,0 +1,12 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th= "Book"
+      %th= "Author"
+      %th= "Language"
+  %tbody
+    - books.each do |book|
+      %tr
+        %td= book.name
+        %td= book.author.name
+        %td= book.language.name

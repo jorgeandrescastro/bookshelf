@@ -6,3 +6,18 @@
   background-image: -ms-linear-gradient($direction, $initial_color $initial_percentage, $final_color $final_percentage);
   background-image: linear-gradient(to $direction, $initial_color $initial_percentage, $final_color $final_percentage);
 }
+
+@mixin round_corners($factor) {
+  -moz-border-radius:  $factor;
+  -webkit-border-radius:  $factor; 
+  border-radius: $factor;
+}
+
+@mixin gradient_gray_boxes {
+  background-color: #EEEEEE;
+  background-image: -moz-linear-gradient(90deg, #e0e0e0 0%, #FFF 50%, #FFF 100%);
+  background-image: -webkit-linear-gradient(90deg, #e0e0e0 0%, #FFF 50%, #FFF 100%);
+  background-image: -o-linear-gradient(90deg, #e0e0e0 0%, #FFF 50%, #FFF 100%);
+  background-image: -ms-linear-gradient(90deg, #e0e0e0 0%, #FFF 50%, #FFF 100%);
+  background-image: linear-gradient(top, #e0e0e0 0%, #FFF 50%, #FFF 100%);
+}

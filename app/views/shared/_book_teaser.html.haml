@@ -1,0 +1,7 @@
+= link_to book_path(book) do
+  .book-teaser.clearfix
+    .book-image.pull-left= image_tag book.image.url(:small)
+    .book-info
+      .book-name= book.name
+      .book-author= book.author.name
+      .book-genres= book.genre_names

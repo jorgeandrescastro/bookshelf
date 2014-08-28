@@ -10,4 +10,19 @@ class Book < ActiveRecord::Base
   has_and_belongs_to_many :genres
   accepts_nested_attributes_for :genres
 
+  NUMBER_OF_LATEST_BOOKS = 4
+
+  class << self
+
+    def latest amount=1
+      order('created_at desc').limit(amount)
+    end
+
+
+  end
+
+  def genre_names
+    self.genres.map(&:name).join(', ')
+  end
+
 end
