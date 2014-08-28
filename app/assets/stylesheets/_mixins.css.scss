@@ -1,0 +1,8 @@
+@mixin gradient_background($direction, $initial_color, $initial_percentage, $final_color, $final_percentage, $default_color) {
+  background-color: $default_color;
+  background-image: -moz-linear-gradient($direction, $initial_color $initial_percentage, $final_color $final_percentage);
+  background-image: -o-linear-gradient($direction, $initial_color $initial_percentage, $final_color $final_percentage);
+  background-image: -webkit-linear-gradient($direction, $initial_color $initial_percentage, $final_color $final_percentage);
+  background-image: -ms-linear-gradient($direction, $initial_color $initial_percentage, $final_color $final_percentage);
+  background-image: linear-gradient(to $direction, $initial_color $initial_percentage, $final_color $final_percentage);
+}
