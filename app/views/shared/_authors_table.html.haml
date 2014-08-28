@@ -1,0 +1,12 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th= "Author"
+      %th= "Nationality"
+  %tbody
+    - authors.each do |author|
+      %tr
+        %td= link_to author.name, author_path(author)
+        %td= author.birth_country
+
+= will_paginate @authors, :class => 'pager', renderer: BootstrapPagination::Rails

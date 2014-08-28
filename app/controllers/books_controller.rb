@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all.paginate(page: params[:page], per_page: 5)
+    @books = Book.all.paginate(page: params[:page], per_page: 10)
   end
 
   def create

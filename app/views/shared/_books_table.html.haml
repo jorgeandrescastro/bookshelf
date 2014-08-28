@@ -7,7 +7,8 @@
   %tbody
     - books.each do |book|
       %tr
-        %td= book.name
+        %td= link_to book.name, book_path(book)
         %td= book.author.name
         %td= book.language.name
-= will_paginate @books
+
+= will_paginate @books, :class => 'pager', renderer: BootstrapPagination::Rails

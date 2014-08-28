@@ -1,13 +1,2 @@
 %h1= "Listing all Authors"
-%table
-  %tr
-    %th= "Name"
-    %th= "Biography"
-    %th= "Year of Birth"
-    %th= "Nationality"
-  - @authors.each do |author|
-    %tr
-      %td= author.name
-      %td= author.biography
-      %td= author.birth_year
-      %td= author.birth_country
+=render "shared/authors_table", authors: @authors
