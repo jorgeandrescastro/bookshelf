@@ -8,7 +8,6 @@ FactoryGirl.define do
     f.published_year 1976
     f.genres { [FactoryGirl.create(:genre)] }
     f.author_id 1
-    f.image File.new("#{Rails.root}/spec/fixtures/image.jpg")
     f.language_id 1
   end
 
@@ -19,7 +18,6 @@ FactoryGirl.define do
     f.published_year 1976
     f.genres { [FactoryGirl.create(:genre)] }
     f.author_id 1
-    f.image File.new("#{Rails.root}/spec/fixtures/image.jpg")
     f.language_id 1
   end
 end

@@ -16,7 +16,7 @@ describe Book do
       expect(@book).to be_valid
     end
 
-    [:name, :description, :isbn, :published_year, :author_id, :image, :language_id].each do |attr|
+    [:name, :description, :isbn, :published_year, :author_id, :language_id].each do |attr|
       it "must have a #{attr}" do
         @book.send("#{attr}=", nil)
         expect(@book).not_to be_valid

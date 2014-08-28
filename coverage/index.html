@@ -14,26 +14,26 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-08-27T19:29:59-05:00">2014-08-27T19:29:59-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-08-27T20:12:46-05:00">2014-08-27T20:12:46-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">76.14%</span></span>
+    (<span class="covered_percent"><span class="red">75.99%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.02
+         1.01
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>41</b> files in total.
-    <b>306</b> relevant lines. 
-    <span class="green"><b>233</b> lines covered</span> and
+    <b>304</b> relevant lines. 
+    <span class="green"><b>231</b> lines covered</span> and
     <span class="red"><b>73</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -383,9 +383,9 @@
       <tr>
         <td class="strong"><a href="#171bce91523612d80a95b701d454397e6abb6461" class="src_link" title="spec/factories/book.rb">spec/factories/book.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>25</td>
-        <td>19</td>
-        <td>19</td>
+        <td>29</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
         <td>1.9</td>
       </tr>
@@ -427,7 +427,7 @@
         <td>40</td>
         <td>40</td>
         <td>0</td>
-        <td>2.0</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -2287,7 +2287,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates_presence_of :name, :description, :isbn, :published_year, :author_id, :image, :language_id</code>
+          <code class="ruby">  validates_presence_of :name, :description, :isbn, :published_year, :author_id, :language_id</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -6973,8 +6973,8 @@
     <h3>spec/factories/book.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -7030,8 +7030,8 @@
           <code class="ruby">    f.published_year 1976</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="9">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="15" data-linenumber="9">
+          <span class="hits">15</span>
           
           <code class="ruby">    f.genres { [FactoryGirl.create(:genre)] }</code>
         </li>
@@ -7042,91 +7042,115 @@
           <code class="ruby">    f.author_id 1</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="11">
           
-          <code class="ruby">    f.image File.new(&quot;#{Rails.root}/spec/fixtures/image.jpg&quot;)</code>
+          
+          <code class="ruby">    # f.image File.new(&quot;#{Rails.root}/spec/fixtures/image.jpg&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="12">
           
-          <code class="ruby">    f.language_id 1</code>
+          
+          <code class="ruby">    # f.image { fixture_file_upload(Rails.root.join(&#39;spec&#39;, &#39;fixtures&#39;, &#39;image.jpg&#39;), &#39;image/jpg&#39;) } </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    # f.image FactoryGirl.create(:attachment)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  factory :book_2, class: Book do |f|</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    f.name &quot;Book Spec 2&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    f.description &quot;Description Book 2&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    f.isbn &#39;8145454578451&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    f.published_year 1976</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="20">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    f.genres { [FactoryGirl.create(:genre)] }</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    f.author_id 1</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    f.image File.new(&quot;#{Rails.root}/spec/fixtures/image.jpg&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">    f.language_id 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :book_2, class: Book do |f|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    f.name &quot;Book Spec 2&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    f.description &quot;Description Book 2&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    f.isbn &#39;8145454578451&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    f.published_year 1976</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="22">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    f.genres { [FactoryGirl.create(:genre)] }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    f.author_id 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    # f.image File.new(&quot;#{Rails.root}/spec/fixtures/image.jpg&quot;)</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">    # f.image { fixture_file_upload(Rails.root.join(&#39;spec&#39;, &#39;fixtures&#39;, &#39;image.jpg&#39;), &#39;image/jpg&#39;) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    # f.image FactoryGirl.create(:attachment)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    f.language_id 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>
@@ -7498,8 +7522,8 @@
           <code class="ruby">  before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="7">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="14" data-linenumber="7">
+          <span class="hits">14</span>
           
           <code class="ruby">    @book = FactoryGirl.build(:book)</code>
         </li>
@@ -7573,23 +7597,23 @@
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    [:name, :description, :isbn, :published_year, :author_id, :image, :language_id].each do |attr|</code>
+          <code class="ruby">    [:name, :description, :isbn, :published_year, :author_id, :language_id].each do |attr|</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="20">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="20">
+          <span class="hits">6</span>
           
           <code class="ruby">      it &quot;must have a #{attr}&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="21">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="21">
+          <span class="hits">6</span>
           
           <code class="ruby">        @book.send(&quot;#{attr}=&quot;, nil)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="22">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="22">
+          <span class="hits">6</span>
           
           <code class="ruby">        expect(@book).not_to be_valid</code>
         </li>
