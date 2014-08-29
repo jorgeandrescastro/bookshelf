@@ -1,12 +1,10 @@
-%p
-  %strong= "Name of the Author"
-  = @author.name
-%p
-  %strong= "Biography"
+.author-information
+  .author-image.pull-left= image_tag @author.image.url(:medium)
+  %h4= @author.name
+  .author-data= "was born on #{@author.birth_year}"
+  .author-data= "and died on #{@author.death_date}" unless @author.death_date.nil?
+  .author-data.clearfix= "Nationality: #{@author.birth_country}" 
+.author-description
+  %strong= "Biography:"
+  %br
   = @author.biography
-%p
-  %strong= "Year of Birth"
-  = @author.birth_year
-%p
-  %strong= "Nationality"
-  = @author.birth_country

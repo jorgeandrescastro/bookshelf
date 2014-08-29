@@ -103,6 +103,21 @@ a {
 }
 /*************BOOK INFO END****************/
 
+/*************BOOK INFO *******************/
+.author-information {
+  .author-image {
+    margin-right: 10px;
+  }
+  h4 { 
+    margin-bottom: 25px;
+  }
+}
+
+.author-description {
+  margin: 22px 0 15px 0;
+}
+/*************BOOK INFO END****************/
+
 /*************FOOTER***********************/
 .footer {
   background-color: $palette-medium;
