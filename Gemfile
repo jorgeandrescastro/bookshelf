@@ -60,6 +60,10 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
 end
 
+group :production, :staging do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0.2'
 	gem 'factory_girl_rails', '~> 4.4.1'
