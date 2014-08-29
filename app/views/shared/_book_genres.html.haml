@@ -1,0 +1,12 @@
+.book-genres
+  %strong= "This book is categorized under the next genres:"
+  %br
+  %ul.nav.nav-tabs
+    - genres.each do |genre|
+      %li
+        %a{:href => "#tab#{genre.id}", :"data-toggle" => "tab"}
+          = genre.name
+  .tab-content
+    - genres.each do |genre|
+      .tab-pane{id: "tab#{genre.id}"}
+        %p= genre.description
