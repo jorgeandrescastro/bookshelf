@@ -1,6 +1,6 @@
-%p
-  %strong= "Name of the Genre"
-  = @genre.name
-%p
-  %strong= "Description"
+.genre-name
+  %h4= @genre.name 
+.genre-description
   = @genre.description
+%strong= "Books of #{@genre.name}:"
+= render "shared/books_table", books: @genre.books, paginate: false
