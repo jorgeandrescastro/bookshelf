@@ -8,9 +8,9 @@
 }
 
 @mixin round_corners($factor) {
-  -moz-border-radius:  $factor;
-  -webkit-border-radius:  $factor; 
-  border-radius: $factor;
+  -moz-border-radius:  $factor !important;
+  -webkit-border-radius:  $factor !important; 
+  border-radius: $factor !important;
 }
 
 @mixin gradient_gray_boxes {

@@ -2,6 +2,7 @@
 @import "mixins";
 
 $header-height: 50px;
+$footer-height: 40px;
 
 body {
   background-color: $palette-light !important;
@@ -73,3 +74,31 @@ a {
 }
 
 /*************TEASERS END******************/
+
+/*************PAGER************************/
+.pagination {
+  font-family: helvetica;
+  a {
+    @include round_corners(20px);
+    height: 25px !important;
+    line-height: 25px !important;
+    text-align: center;
+    padding: 2px 10px !important;
+  }
+}
+/*************PAGER END********************/
+
+/*************FOOTER***********************/
+.footer {
+  background-color: $palette-medium;
+  height: $footer-height;
+  clear: both;
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color:$palette-light;
+  line-height: $footer-height;
+}
+/*************FOOTER END*******************/

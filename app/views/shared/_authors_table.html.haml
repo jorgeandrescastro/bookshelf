@@ -9,4 +9,4 @@
         %td= link_to author.name, author_path(author)
         %td= author.birth_country
 
-= will_paginate @authors, :class => 'pager', renderer: BootstrapPagination::Rails
+= will_paginate @authors
