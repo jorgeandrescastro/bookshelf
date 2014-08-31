@@ -12,6 +12,7 @@
     .container
       .row-fluid
         .span8
+          = render "shared/notice", notice: notice, alert: alert 
           =yield
         .span4
-          =render "shared/sidebar", latest_books: @latest_books
+          = render "shared/sidebar", latest_books: @latest_books
