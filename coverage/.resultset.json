@@ -692,6 +692,11 @@
         null,
         null
       ],
+      "/home/andres/workspace/bookshelf/config/initializers/kaminari.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/andres/workspace/bookshelf/config/initializers/mime_types.rb": [
         null,
         null,
@@ -755,11 +760,8 @@
         1,
         1,
         1,
-        15,
+        18,
         1,
-        null,
-        null,
-        null,
         1,
         null,
         null,
@@ -768,11 +770,8 @@
         1,
         1,
         1,
-        3,
+        6,
         1,
-        null,
-        null,
-        null,
         1,
         null,
         null
@@ -789,6 +788,21 @@
         1,
         1,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -811,11 +825,20 @@
         null,
         null
       ],
+      "/home/andres/workspace/bookshelf/spec/factories/users.rb": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/andres/workspace/bookshelf/config/routes.rb": [
         1,
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -875,6 +898,14 @@
         null,
         null,
         null,
+        null,
+        null
+      ],
+      "/home/andres/workspace/bookshelf/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
         null,
         null
       ],
@@ -883,10 +914,23 @@
         null,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/home/andres/workspace/bookshelf/app/helpers/application_helper.rb": [
         1,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/home/andres/workspace/bookshelf/app/helpers/authors_helper.rb": [
@@ -1182,7 +1226,7 @@
         1,
         null,
         1,
-        14,
+        17,
         null,
         null,
         1,
@@ -1207,6 +1251,28 @@
         2,
         2,
         2,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        3,
+        3,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -1306,8 +1372,15 @@
         null,
         null,
         null
+      ],
+      "/home/andres/workspace/bookshelf/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1409188366
+    "timestamp": 1410029796
   }
 }

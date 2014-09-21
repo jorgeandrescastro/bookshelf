@@ -33,6 +33,28 @@ describe Book do
     end
   end
 
+  describe "Basic Functionality" do
+    before(:each) do
+      @book.save
+      @latest_book = FactoryGirl.create(:book_2)
+    end
+
+    it "should return the correct latest book" do
+      expect(Book.latest.first).to eq(@latest_book)
+    end
+
+    it "should return the correct amount of latest books" do
+      amount_of_latest_books = 1
+      expect(Book.latest(amount_of_latest_books).count).to eq(amount_of_latest_books)
+    end
+
+    it "should return the proper category names" do
+      genre = FactoryGirl.build(:genre)
+      expect(@book.genre_names).to include(genre.name)
+    end
+    
+  end
+
   describe "Author association" do
     it "should have the correct name" do
       author = FactoryGirl.create(:author)
