@@ -12,7 +12,7 @@ class GenresController < ApplicationController
   end
 
   def show
-    @genre = Genre.find(params[:id])
+    @genre = Genre.friendly.find(params[:id])
   end
 
   private

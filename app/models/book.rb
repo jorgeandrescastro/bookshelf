@@ -1,4 +1,8 @@
 class Book < ActiveRecord::Base
+
+  extend FriendlyId
+   friendly_id :name, use: :slugged
+
   validates_presence_of :name, :description, :isbn, :published_year, :author_id, :language_id
   validates_uniqueness_of :name, :isbn
 

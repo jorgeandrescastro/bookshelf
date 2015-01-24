@@ -8,7 +8,7 @@ class AuthorsController < ApplicationController
   end
 
   def show
-    @author = Author.find(params[:id])
+    @author = Author.friendly.find(params[:id])
   end
 
 end

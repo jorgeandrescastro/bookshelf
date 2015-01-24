@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140831172646) do
+ActiveRecord::Schema.define(version: 20150124031819) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -58,7 +58,10 @@ ActiveRecord::Schema.define(version: 20140831172646) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "slug"
   end
+
+  add_index "authors", ["slug"], name: "index_authors_on_slug", unique: true, using: :btree
 
   create_table "books", force: true do |t|
     t.string   "name"
@@ -73,17 +76,36 @@ ActiveRecord::Schema.define(version: 20140831172646) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "language_id"
+    t.string   "slug"
   end
+
+  add_index "books", ["slug"], name: "index_books_on_slug", unique: true, using: :btree
 
   create_table "books_genres", id: false, force: true do |t|
     t.integer "book_id"
     t.integer "genre_id"
   end
 
+  create_table "friendly_id_slugs", force: true do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
   create_table "genres", force: true do |t|
     t.string "name"
     t.text   "description"
+    t.string "slug"
   end
+
+  add_index "genres", ["slug"], name: "index_genres_on_slug", unique: true, using: :btree
 
   create_table "languages", force: true do |t|
     t.string "name"

@@ -1,4 +1,8 @@
 class Author < ActiveRecord::Base
+
+  extend FriendlyId
+   friendly_id :name, use: :slugged
+   
   validates_presence_of :name, :biography, :birth_country, :birth_year
 
   has_attached_file :image, styles: { small: "75x100", medium: "150x200", large: "300x400" }
