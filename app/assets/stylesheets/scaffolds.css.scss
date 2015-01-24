@@ -43,10 +43,8 @@ a {
 
 /*************TEASERS**********************/
 .latest-books {
-  @include round_corners(10px);
-  background-color: $palette-medium-dark;
   padding: 5px 10px 5px 10px;
-  color: $palette-light;
+  color: $palette-dark;
 }
 
 .book-teaser {
