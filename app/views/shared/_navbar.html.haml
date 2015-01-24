@@ -1,8 +1,9 @@
-.navbar
-  .navbar-inner
-    %ul.nav
-      = nav_link 'Home', root_path
-      = nav_link 'Books', books_path
-      = nav_link 'Authors', authors_path
-      = nav_link 'Genres', genres_path  
-    =render "shared/login_bar"
+.nav-collapse.collapse
+  .navbar
+    .navbar-inner
+      %ul.nav
+        = nav_link 'Home', root_path
+        = nav_link 'Books', books_path
+        = nav_link 'Authors', authors_path
+        = nav_link 'Genres', genres_path  
+      =render "shared/login_bar"
