@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150124031819) do
+ActiveRecord::Schema.define(version: 20150124220209) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -62,6 +62,13 @@ ActiveRecord::Schema.define(version: 20150124031819) do
   end
 
   add_index "authors", ["slug"], name: "index_authors_on_slug", unique: true, using: :btree
+
+  create_table "bookcases", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "books", force: true do |t|
     t.string   "name"

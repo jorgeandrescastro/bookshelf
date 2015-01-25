@@ -11,6 +11,7 @@ Bookshelf::Application.routes.draw do
   resources :authors
   resources :genres
   resources :languages
+  resources :bookcases
 
   # You can have the root of your site routed with "root"
   root 'home#index'
