@@ -6,6 +6,7 @@ class BookcasesController < ApplicationController
   end
 
   def index    
+    @current_user    
   end
 
   def show    

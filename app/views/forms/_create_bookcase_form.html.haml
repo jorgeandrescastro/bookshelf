@@ -1,0 +1,6 @@
+= form_for("bookcase", :url => new_bookcase_path) do |f|
+  .input-append
+    = f.text_field :name, :class => "span3", :id => "appendedInputButton"
+    = f.hidden_field(:user_id, :value => user.id)
+    %button{:type => "submit", :class => "btn btn-info" }
+      Create Bookcase

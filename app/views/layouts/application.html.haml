@@ -2,7 +2,7 @@
 %html
   %head
     %link{href: 'http://fonts.googleapis.com/css?family=Special+Elite', rel: 'stylesheet', type: 'text/css'}
-    %meta{:name => "viewport", :id => "viewport", :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"}
+    %meta{:name => "viewport", :id => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %title= 'Welcome to the your Bookshelf'
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
     = javascript_include_tag "application", "data-turbolinks-track" => true    
@@ -14,5 +14,5 @@
         .span8
           = render "shared/notice", notice: notice, alert: alert 
           =yield
-        .span4
+        .span4.hidden-phone
           = render "shared/sidebar", latest_books: @latest_books
