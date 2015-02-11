@@ -1,8 +1,10 @@
 %h1= "Your bookcases" 
-= render "forms/create_bookcase_form", user: @current_user
+= render "forms/create_bookcase_form"
 - if @current_user.bookcases.length == 0
   .hero-unit
     %p= "You don't have bookcases yet"
     %a{href: new_bookcase_path}
       %button.btn.btn-inverse{type: "button"}
         Create a new Bookcase
+  #bookcases
+ 
