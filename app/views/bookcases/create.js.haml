@@ -1,1 +1,2 @@
-$("#bookcases").append('#{@bookcase.name}');
+$("#bookcases").append("#{j render(partial: 'shared/bookcase', locals: {bookcase: @bookcase})}");
+$("form #bookcase_name").val("");

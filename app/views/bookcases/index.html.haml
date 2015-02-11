@@ -1,10 +1,6 @@
-%h1= "Your bookcases" 
+%h1= "Welcome to your Bookcases" 
+%p.lead= "You can create up to 5 bookcases"
 = render "forms/create_bookcase_form"
-- if @current_user.bookcases.length == 0
-  .hero-unit
-    %p= "You don't have bookcases yet"
-    %a{href: new_bookcase_path}
-      %button.btn.btn-inverse{type: "button"}
-        Create a new Bookcase
-  #bookcases
- 
+#bookcases
+  - @current_user.bookcases.each do |bookcase|
+    = render "shared/bookcase", bookcase: bookcase 
