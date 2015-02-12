@@ -23,7 +23,8 @@ class BookcasesController < ApplicationController
     @current_user    
   end
 
-  def show    
+  def show 
+    @bookcase = Bookcase.find(params[:id])  
   end
 
   private 

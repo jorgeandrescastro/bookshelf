@@ -12,6 +12,7 @@ class Book < ActiveRecord::Base
   belongs_to :author
   belongs_to :language
   has_and_belongs_to_many :genres
+  has_and_belongs_to_many :bookcases
   accepts_nested_attributes_for :genres
 
   NUMBER_OF_LATEST_BOOKS = 4
