@@ -1,6 +1,7 @@
 %h1= "Welcome to your Bookcases" 
-%p.lead= "You can create up to 5 bookcases"
+%p.lead= "You can create here your bookcases to group up your books"
 = render "forms/create_bookcase_form"
+#result.hide.alert
 #bookcases
   - @current_user.bookcases.each do |bookcase|
     = render "shared/bookcase", bookcase: bookcase 
