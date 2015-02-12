@@ -1,5 +1,16 @@
 - if user_signed_in?
-  .btn-toolbar
-    .btn-group
-      %button.btn.btn-primary
-        %i.icon-plus-sign= " Add to Bookcase"
+  .add-bookcase
+    .btn-toolbar
+      .btn-group
+        %a.btn.btn-primary{href: "#myModal", role: "button", :"data-toggle" => "modal"}
+          %i.icon-plus-sign.icon-white= " Add to Bookcase"
+
+  #myModal.modal.hide.fade{tabindex: "-1", role: "dialog", :"aria-labelledby" => "myModalLabel", :"aria-hidden" => "true"}
+    .modal-header
+      %button.close{type: "button", :"data-dismiss" => "modal", :"aria-hidden" => "true"}= "x"
+      %h3{id: "myModalLabel"}= "My Bookcases"
+    .modal-body
+      %p= "One Fine Body"
+    .modal-footer
+      %button.btn{:"data-dismiss" => "modal", :"aria-hidden" => "true"}= "Close"
+      %button.btn.btn-primary= "Save Changes"
