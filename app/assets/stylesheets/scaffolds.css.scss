@@ -135,3 +135,30 @@ a {
   line-height: $footer-height;
 }
 /*************FOOTER END*******************/
+
+
+/*************BOOKCASE*******************/
+
+#bookcases {
+  padding-top: 20px;
+}
+
+.bookcase-teaser {
+  width: 115px;
+  margin-right: 10px;
+  height: 160px;
+}
+
+.bookcase-name {
+  text-align: center;
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+.add-bookcase {
+  a, a:link, a:visited {
+    color: white;
+  }
+}
+
+/*************BOOKCASE END*******************/

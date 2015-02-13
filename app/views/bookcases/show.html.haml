@@ -1,0 +1,4 @@
+.bookcase-name
+  %h4= @bookcase.name 
+%strong= "Books in the bookcase:"
+= render "shared/books_table", books: @bookcase.books, paginate: false

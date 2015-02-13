@@ -1,0 +1,5 @@
+$("#bookcases").append("#{j render(partial: 'shared/bookcase', locals: {bookcase: @bookcase})}");
+$("#result").addClass('alert-success');
+$("#result").show();
+$("#result").html("The bookcase '#{@bookcase.name}' has been created");
+$("form #bookcase_name").val("");

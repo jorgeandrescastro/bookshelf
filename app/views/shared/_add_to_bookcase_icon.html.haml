@@ -1,0 +1,16 @@
+- if user_signed_in? && @bookcases.count > 0
+  .add-bookcase
+    .btn-toolbar
+      .btn-group
+        %a.btn.btn-primary{href: "#myModal", role: "button", :"data-toggle" => "modal"}
+          %i.icon-plus-sign.icon-white= " Add to Bookcase"
+
+  #myModal.modal.hide.fade{tabindex: "-1", role: "dialog", :"aria-labelledby" => "myModalLabel", :"aria-hidden" => "true"}
+    .modal-header
+      %button.close{type: "button", :"data-dismiss" => "modal", :"aria-hidden" => "true"}= "x"
+      %h3{id: "myModalLabel"}= "My Bookcases"
+    #add-book.modal-body
+      %p= "Select the bookcase you want:"
+      = render "forms/add_book_to_bookcase_form", book: @book, bookcases: @bookcases
+    .modal-footer
+      %button.btn{:"data-dismiss" => "modal", :"aria-hidden" => "true"}= "Close"

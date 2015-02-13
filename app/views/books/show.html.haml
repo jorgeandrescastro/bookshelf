@@ -1,10 +1,12 @@
 .book-information
-  .book-image.pull-left= image_tag @book.image.url(:medium)
+  .book-image.pull-left= image_tag(@book.image.url(:medium), class: "img-polaroid")
   %h4= @book.name
   .book-data= "Written by #{@book.author.name}"
   .book-data= "Published in #{@book.published_year}"
   .book-data= "Written in #{@book.language.name}"
-  .book-data.clearfix= "ISBN: #{@book.isbn}"
+  .book-data= "ISBN: #{@book.isbn}"
+  .book-data.clearfix
+    = render "shared/add_to_bookcase_icon", book: @book, bookcases: @bookcases
 .book-description
   %strong= "The book is about:"
   %br
