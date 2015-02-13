@@ -127,7 +127,7 @@ a {
   height: $footer-height;
   clear: both;
   z-index: 10;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   text-align: center;

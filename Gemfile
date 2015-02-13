@@ -56,6 +56,7 @@ gem 'haml-rails', '~> 0.5.1'
 gem 'therubyracer', '~> 0.12.1'
 gem 'less-rails', '~> 2.5.0'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
+gem "font-awesome-rails"
 
 # Specific gems for development 
 group :development do
