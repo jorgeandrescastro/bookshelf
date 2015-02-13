@@ -150,7 +150,6 @@ a {
 }
 
 .bookcase-name {
-  text-align: center;
   padding-top: 5px;
   font-weight: bold;
 }
@@ -159,6 +158,18 @@ a {
   a, a:link, a:visited {
     color: white;
   }
+}
+
+.bookcase {
+  background-image: url("/assets/bookcase1.png");
+  width: 640px;
+  height: 926px;
+  padding-top: 34px;
+  border: 1px solid #7E3517;
+}
+
+.book-in-shelf {
+  margin: 46px 0 14px 26px;
 }
 
 /*************BOOKCASE END*******************/

@@ -1,0 +1,4 @@
+.bookcase
+  - books.each do |book|
+    = link_to book_path(book) do
+      .book-in-shelf.pull-left= image_tag(book.image.url(:small))
