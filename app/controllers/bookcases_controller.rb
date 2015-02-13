@@ -28,6 +28,17 @@ class BookcasesController < ApplicationController
   end
 
   def add_book
+    @book = Book.find(params[:book_id])
+    params[:bookcase].each do |bookcase_id|
+      bookcase = Bookcase.find(bookcase_id)
+      bookcase.books << @book
+    end
+
+    respond_to do |format|
+      format.html { redirect_to @book, notice: 'Bookcase was successfully created.' }
+      format.js   {}
+      format.json { render json: @book }
+    end
   end
 
   private 

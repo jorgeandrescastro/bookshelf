@@ -9,7 +9,7 @@
     .modal-header
       %button.close{type: "button", :"data-dismiss" => "modal", :"aria-hidden" => "true"}= "x"
       %h3{id: "myModalLabel"}= "My Bookcases"
-    .modal-body
+    #add-book.modal-body
       %p= "Select the bookcase you want:"
       = render "forms/add_book_to_bookcase_form", book: @book, bookcases: @bookcases
     .modal-footer
