@@ -18,6 +18,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.friendly.find(params[:id])
+    @bookcases = current_user ? current_user.bookcases : []
   end
 
   private

@@ -1,0 +1,7 @@
+= form_tag add_book_to_bookcase_path, method: :post, remote: true do
+  = hidden_field_tag :book_id, @book.id
+  - @bookcases.each do |bookcase|
+    %label.checkbox
+      = check_box_tag("bookcase", bookcase.id, false)
+      = bookcase.name
+  = submit_tag "Add to Bookcases", :class => "btn btn-inverse"

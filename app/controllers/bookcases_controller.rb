@@ -27,6 +27,9 @@ class BookcasesController < ApplicationController
     @bookcase = Bookcase.find(params[:id])  
   end
 
+  def add_book
+  end
+
   private 
     def back_to_login
       redirect_to new_user_session_path 

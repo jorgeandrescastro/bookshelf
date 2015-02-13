@@ -6,7 +6,7 @@
   .book-data= "Written in #{@book.language.name}"
   .book-data= "ISBN: #{@book.isbn}"
   .book-data.clearfix
-    = render "shared/add_to_bookcase_icon", book: @book
+    = render "shared/add_to_bookcase_icon", book: @book, bookcases: @bookcases
 .book-description
   %strong= "The book is about:"
   %br
