@@ -882,6 +882,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         null,
@@ -941,7 +942,10 @@
         1,
         1,
         1,
+        1,
         null,
+        null,
+        1,
         null,
         1,
         null,
@@ -1001,6 +1005,8 @@
         null,
         1,
         null,
+        null,
+        1,
         null
       ],
       "/home/andres/workspace/bookshelf/app/controllers/application_controller.rb": [
@@ -1020,9 +1026,11 @@
         1,
         1,
         0,
+        0,
         null,
         0,
         0,
+        null,
         null,
         null,
         null
@@ -1483,6 +1491,6 @@
         null
       ]
     },
-    "timestamp": 1422070061
+    "timestamp": 1423858627
   }
 }
