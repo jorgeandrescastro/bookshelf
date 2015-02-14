@@ -24,7 +24,8 @@ class BookcasesController < ApplicationController
   end
 
   def show 
-    @bookcase = Bookcase.find(params[:id])  
+    @bookcase = Bookcase.find(params[:id])
+    @books = @bookcase.books.paginate(page: params[:page], per_page: 24)
   end
 
   def add_book
