@@ -25,4 +25,17 @@ describe Author do
 
   end
 
+  describe "Basic Functionality" do
+    context "Assignment of authors" do
+      it "should return the correct books" do
+        @author.save    
+        game1 = FactoryGirl.create(:book, author_id: @author.id)
+        game2 = FactoryGirl.create(:book_2)
+
+        expect(@author.books).to include(game1)
+        expect(@author.books).not_to include(game2)
+      end
+    end
+  end
+
 end
