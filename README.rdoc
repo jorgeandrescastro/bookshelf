@@ -1,28 +1,11 @@
 == README Bookshelf
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project on my own mixing two of my passions, Books and Development using Ruby on Rails.
+The idea is to create a social network for bookworms, in which one can keep track of books read, to be read, and categorize them by bookshelves. In the future, boting, recommendations, comments will be available.
 
-Things you may want to cover:
+I have used Heroku to deploy this project, and it can be find on the following link:
+http://jacm-bookshelf.herokuapp.com
 
-* Ruby version
+This is a work on progress...
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Jorge Castro
